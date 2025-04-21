@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TechMarket | Login</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/script.js"></script>
+        <link rel="icon" href="logo.jpg">
+        <meta name="author" content="Mihoubi Youcef">
+    </head>
+    <body>
+        <header>
+            <table width="100%">
+                <tr>
+                    <td>
+                        <a href="index.html">
+                            <h1>TechMarket</h1>
+                        </a>
+                    </td>
+                    <td align="right">
+                        <a href="login.html">Login</a> |
+                        <a href="signup.html">Sign Up</a>
+                        <button onclick="toggleTheme()" style="float:right; margin-right: 10px;">🌓Dark Mode</button>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <form method="post" >
+           <center><h1>Welcome</h1></center>
+            <table border="2" width="40%" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2" id="login_bg"><img src="login.png" alt="Login"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><b>Email Address</b></td>
+                    <td><input type="email" placeholder="Email Address" id="email"></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                    <td><input type="password" placeholder="Password" id="password"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="check_login()">Login</td>
+                    <td><button type="reset">Clear</td>
+                </tr>
+                <tr>
+                    <td><b>Don't have account?</b></td>
+                    <td><a href="signup.html">Sign Up</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <p id="msg"></p>
+        </form>
+    </body>
+</html>
