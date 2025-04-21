@@ -1,0 +1,292 @@
+
+body {
+    font-family: 'Inter', sans-serif; 
+    background: #f7f8fa; 
+    color: #2d3748; 
+    line-height: 1.6;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+*::selection{
+    color: black;
+}
+
+.header {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+header a {
+    color: #555;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #1a73e8;
+}
+
+main {
+    max-width: 1280px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 15px;
+}
+
+.category {
+    background: #1a73e8;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+td {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+body#index-page td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    transition: transform 0.3s;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin: 40px auto;
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background: #1a73e8;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1557b0;
+}
+#buy {
+    align-items: middle;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    main, form {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.price{
+    color:blue;
+}
+.product:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+#login_bg{
+    background: #1a73e8;
+}
+#login_bg img:hover{
+    transform: scale(1.1);
+}
+#order{
+    max-width: 80%;
+}
+#msg{
+    text-align: center;
+}
+#signup_form{
+    margin: 40px auto;
+    max-width: 900px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+
+
+body.dark-theme {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+/* عناصر الخلفية */
+body.dark-theme .header,
+body.dark-theme form,
+body.dark-theme td,
+body.dark-theme #signup_form,
+body.dark-theme .category {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* العناوين */
+body.dark-theme header h1,
+body.dark-theme form h1,
+body.dark-theme .category {
+    color: #facc15; /* أصفر هادئ */
+}
+
+/* الروابط */
+body.dark-theme header a,
+body.dark-theme a {
+    color: #4dabf7;
+}
+
+body.dark-theme header a:hover,
+body.dark-theme a:hover {
+    color: #4dabf7;
+}
+
+/* الحقول */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-theme input:focus,
+body.dark-theme textarea:focus,
+body.dark-theme select:focus {
+    border-color: #4dabf7;
+    outline: none;
+}
+
+/* الأزرار */
+body.dark-theme button {
+    background: #4dabf7;
+    color: #ffffff;
+}
+
+body.dark-theme button:hover {
+    background: #339af0;
+}
+
+/* الصور */
+body.dark-theme img {
+    filter: brightness(0.85);
+}
+
+/* السعر والتمييز */
+body.dark-theme .price {
+    color: #facc15;
+}
+
+/* خلفية login */
+body.dark-theme #login_bg {
+    background: #1e1e1e;
+}
+
+/* رسائل */
+body.dark-theme #msg {
+    color: #f87171;
+}
