@@ -48,6 +48,9 @@ function check_signup(){
     if(!email){
         msg+="Email is required\n";
     }
+    else if(!email.includes("@") || !email.includes(".")){
+        msg+="Email Address is not valid\n";
+    }
     if(!phone){
         msg+="phone is required\n";
     }
