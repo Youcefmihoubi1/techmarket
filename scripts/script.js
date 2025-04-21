@@ -2,21 +2,26 @@
 function check_login(){
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value;
+    let msg = document.getElementById("msg");
     if(!email && !password){
-        document.getElementById("msg").innerText="Username And Password are required\n";
-        document.getElementById("msg").style.color="red";
+        msg.innerText="Username And Password are required\n";
+        msg.style.color="red";
     }
     else if(!email){
-        document.getElementById("msg").innerText="Username is required\n";
-        document.getElementById("msg").style.color="red";
+        msg.innerText="Username is required\n";
+        msg.style.color="red";
     }
     else if(!password){
-        document.getElementById("msg").innerText="Password is required\n";
-        document.getElementById("msg").style.color="red";
+        msg.innerText="Password is required\n";
+        msg.style.color="red";
+    }
+    else if(!email.includes("@") || !email.includes(".")){
+        msg.innerText = "Please enter a valid email address\n";
+        msg.style.color = "red";
     }
     else{
-        document.getElementById("msg").innerText="Login with success\n";
-        document.getElementById("msg").style.color="green";
+        msg.innerText="Login with success\n";
+        msg.style.color="green";
     }
 }
 function check_signup(){
