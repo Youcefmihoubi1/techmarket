@@ -55,14 +55,18 @@ http://localhost:8000/templates/index.html
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
-![Home Page](images/screenshots/home.png)
-
+![Home Page](/htdocs/daw/images/screenshots/home.png)
+![Home Page](/htdocs/daw/images/screenshots/home2.png)
 ### 📦 Product Page  
-![Product Page](images/screenshots/product.png)
-
+![Product Page](/htdocs/daw/images/screenshots/product.png)
+![Product Page](/htdocs/daw/images/screenshots/product2.png)
 ### 🔐 Login And SignUp Page
-![Login Page](images/screenshots/login.png)
-![SignUp Page](images/screenshots/signup.png)
+![Login Page](/htdocs/daw/images/screenshots/login.png)
+![Login Page](/htdocs/daw/images/screenshots/login2.png)
+
+![SignUp Page](/htdocs/daw/images/screenshots/signup.png)
+![SignUp Page](/htdocs/daw/images/screenshots/signup2.png)
+
 ---
 
 ## 📌 Academic Purpose
