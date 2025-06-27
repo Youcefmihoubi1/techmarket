@@ -9,7 +9,7 @@ if (!isset($_SESSION['Id_Clt'])) {
     exit;
 }
 
-$conn = new mysqli("sql209.byethost8.com", "b8_38963450", "youcefmib500", "b8_38963450_Base_Client");
+$conn = new mysqli("", "", "", "");
 if ($conn->connect_error) {
     die("❌ Database connection failed: " . $conn->connect_error);
 }
