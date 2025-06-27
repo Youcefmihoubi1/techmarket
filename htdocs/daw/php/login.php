@@ -1,9 +1,9 @@
 <?php
 session_start();
-$host = 'sql209.byethost8.com';
-$username = 'b8_38963450';
-$password = 'youcefmib500';
-$dbname = 'b8_38963450_Base_Client';
+$host = '';
+$username = '';
+$password = '';
+$dbname = '';
 
 $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
