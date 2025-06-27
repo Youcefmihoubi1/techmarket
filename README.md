@@ -58,8 +58,8 @@ http://localhost:8000/templates/index.html
 ![Home Page](/htdocs/daw/images/screenshots/home.png)
 ![Home Page](/htdocs/daw/images/screenshots/home2.png)
 ### 📦 Product Page  
-![Product Page](/htdocs/daw/images/screenshots/product.png)
-![Product Page](/htdocs/daw/images/screenshots/product2.png)
+![Product Page](/htdocs/daw/images/screenshots/order.png)
+![Product Page](/htdocs/daw/images/screenshots/order2.png)
 ### 🔐 Login And SignUp Page
 ![Login Page](/htdocs/daw/images/screenshots/login.png)
 ![Login Page](/htdocs/daw/images/screenshots/login2.png)
