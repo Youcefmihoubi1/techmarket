@@ -3,7 +3,7 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', '/path/to/error.log');
 
-$conn = new mysqli("sql209.byethost8.com", "b8_38963450", "youcefmib500", "b8_38963450_Base_Client");
+$conn = new mysqli("", "", "", "");
 if ($conn->connect_error) {
     error_log("Connection failed: " . $conn->connect_error);
     echo "<script>alert('❌ Server error. Please try again later.'); window.location.href='/daw/templates/signup.html';</script>";
