@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TechMarket</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+    <link rel="icon" href="../images/icons/logo.png">
+    <meta name="author" content="Mihoubi Youcef">
+    <script src="https://cdn.counter.dev/script.js" data-id="f7dc9020-1df7-44db-9236-a8e027d2c311" data-utcoffset="1"></script>
+</head>
+<body>
+    <header>
+        <table width="100%" border="0">
+            <tr>
+                <td>
+                    <a href="/daw/templates/index.html">
+                        <h1>TechMarket</h1>
+                    </a>
+                </td>
+                <td align="right">
+                    <a href="/daw/templates/login.html">Login</a> | 
+                    <a href="/daw/templates/signup.html">Sign Up</a>
+                    <button onclick="toggleTheme()" style="float:right; margin-right: 10px;">🌓Dark Mode</button>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <main>
+        <table width="100%" border="0" id="index">
+            <thead>
+                <tr>
+                    <th colspan="5" class="category">Laptops & Computers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product"><a href="/daw/php/product.php?id=1"><img src="../images/products/product1.png" alt="product1" height="155" width="155" title="DELL XPS 9640"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=2"><img src="../images/products/product2.png" alt="product2" height="155" width="155" title="ASUS ROG Zephyrus G14"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=3"><img src="../images/products/product3.jpg" alt="product3" height="155" width="155" title="Dell Alienware Aurora R13"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=4"><img src="../images/products/product4.jpg" alt="product4" height="155" width="155" title="HP OMEN 25L"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=5"><img src="../images/products/product5.png" alt="product5" height="155" width="155" title="MacBook Pro 14"></a></td>
+                </tr>
+                <tr>
+                    <td class="price">Price : 320000 DA</td>
+                    <td class="price">Price : 370000 DA</td>
+                    <td class="price">Price : 440000 DA</td>
+                    <td class="price">Price : 295000 DA</td>
+                    <td class="price">Price : 499000 DA</td>
+                </tr>
+            </tbody>
+
+            <thead>
+                <tr>
+                    <th colspan="5" class="category">SmartPhones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product"><a href="/daw/php/product.php?id=6"><img src="../images/products/product6.jpg" alt="product6" height="155" width="155" title="IPhone 15 Plus"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=7"><img src="../images/products/product7.jpg" alt="product7" height="155" width="155" title="Galaxy S24 Ultra"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=8"><img src="../images/products/product8.jpg" alt="product8" height="155" width="155" title="Google Pixel 9 Pro XL"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=9"><img src="../images/products/product9.jpg" alt="product9" height="155" width="155" title="OnePlus 13"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=10"><img src="../images/products/product10.jpg" alt="product10" height="155" width="155" title="Huawei Nova Y70"></a></td>
+                </tr>
+                <tr>
+                    <td class="price">Price : 225000 DA</td>
+                    <td class="price">Price : 203000 DA</td>
+                    <td class="price">Price : 205000 DA</td>
+                    <td class="price">Price : 80000 DA</td>
+                    <td class="price">Price : 310000 DA</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="5" class="category">Gaming Consoles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product"><a href="/daw/php/product.php?id=11"><img src="../images/products/product11.jpg" alt="product11" height="155" width="155" title="Sony PlayStation 5"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=12"><img src="../images/products/product12.jpeg" alt="product12" height="155" width="155" title="Xbox one série X"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=13"><img src="../images/products/product13.jpg" alt="product13" height="155" width="155" title="Nintendo Switch"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=14"><img src="../images/products/product14.jpg" alt="product14" height="155" width="155" title="Sony PlayStation 4"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=15"><img src="../images/products/product15.jpg" alt="product15" height="155" width="155" title="Asus ROG Ally"></a></td>
+                </tr>
+                <tr>
+                    <td class="price">Price : 130000 DA</td>
+                    <td class="price">Price : 110000 DA</td>
+                    <td class="price">Price : 42000 DA</td>
+                    <td class="price">Price : 75000 DA</td>
+                    <td class="price">Price : 130000 DA</td>
+                </tr>
+            </tbody>
+
+            <thead>
+                <tr>
+                    <th colspan="5" class="category">SmartWatches</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product"><a href="/daw/php/product.php?id=16"><img src="../images/products/product16.jpeg" alt="product16" height="155" width="155" title="Apple Watch Series 9"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=17"><img src="../images/products/product17.jpg" alt="product17" height="155" width="155" title="Samsung Galaxy Watch6"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=18"><img src="../images/products/product18.jpg" alt="product18" height="155" width="155" title="Fitbit Versa 3"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=19"><img src="../images/products/product19.jpg" alt="product19" height="155" width="155" title="Huawei Watch GT 3 Pro"></a></td>
+                    <td class="product"><a href="/daw/php/product.php?id=20"><img src="../images/products/product20.jpg" alt="product20" height="155" width="155" title="Amazfit GTR 4"></a></td>
+                </tr>
+                <tr>
+                    <td class="price">Price : 95000 DA</td>
+                    <td class="price">Price : 48000 DA</td>
+                    <td class="price">Price : 26000 DA</td>
+                    <td class="price">Price : 51000 DA</td>
+                    <td class="price">Price : 22500 DA</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>

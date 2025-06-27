@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TechMarket | SignUp</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/daw/styles/style.css" />
+    <script src="/daw/scripts/script.js"></script>
+    <link rel="icon" href="../images/icons/logo.png">
+    <meta name="author" content="Mihoubi Youcef" />
+  </head>
+  <body>
+    <header>
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="/daw/templates/index.html">
+              <h1>TechMarket</h1>
+            </a>
+          </td>
+          <td align="right">
+            <a href="/daw/templates/login.html">Login</a> |
+            <a href="/daw/templates/signup.html">Sign Up</a>
+            <button
+              onclick="toggleTheme()"
+              style="float: right; margin-right: 10px"
+            >
+              🌓Dark Mode
+            </button>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <form
+      method="post"
+      action="/daw/php/signup.php"
+      onsubmit="return check_signup(event)"
+      id="signup_form"
+    >
+      <center><h1>Create An Account</h1></center>
+      <table border="0" width="40%" align="center">
+        <tr>
+          <td><b>First Name</b></td>
+          <td>
+            <input
+              type="text"
+              placeholder="First Name"
+              id="fname"
+              name="fname"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Last Name</b></td>
+          <td>
+            <input
+              type="text"
+              placeholder="Last Name"
+              id="lname"
+              name="lname"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Age</b></td>
+          <td><input type="number" placeholder="Age" id="age" name="age" /></td>
+        </tr>
+        <tr>
+          <td><b>Wilaya</b></td>
+          <td>
+            <select id="wilaya" name="wilaya">
+              <option value="">-- Choose Wilaya --</option>
+              <option value="Adrar">Adrar (1)</option>
+              <option value="Chlef">Chlef (2)</option>
+              <option value="Laghouat">Laghouat (3)</option>
+              <option value="Oum El Bouaghi">Oum El Bouaghi (4)</option>
+              <option value="Batna">Batna (5)</option>
+              <option value="Bejaia">Bejaia (6)</option>
+              <option value="Biskra">Biskra (7)</option>
+              <option value="Bechar">Bechar (8)</option>
+              <option value="Blida">Blida (9)</option>
+              <option value="Bouira">Bouira (10)</option>
+              <option value="Tamanrasset">Tamanrasset (11)</option>
+              <option value="Tebessa">Tebessa (12)</option>
+              <option value="Tlemcen">Tlemcen (13)</option>
+              <option value="Tiaret">Tiaret (14)</option>
+              <option value="Tizi Ouzou">Tizi Ouzou (15)</option>
+              <option value="Algiers">Algiers (16)</option>
+              <option value="Djelfa">Djelfa (17)</option>
+              <option value="Jijel">Jijel (18)</option>
+              <option value="Setif">Setif (19)</option>
+              <option value="Saida">Saida (20)</option>
+              <option value="Skikda">Skikda (21)</option>
+              <option value="Sidi Bel Abbes">Sidi Bel Abbes (22)</option>
+              <option value="Annaba">Annaba (23)</option>
+              <option value="Guelma">Guelma (24)</option>
+              <option value="Constantine">Constantine (25)</option>
+              <option value="Medea">Medea (26)</option>
+              <option value="Mostaganem">Mostaganem (27)</option>
+              <option value="M'Sila">M'Sila (28)</option>
+              <option value="Mascara">Mascara (29)</option>
+              <option value="Ouargla">Ouargla (30)</option>
+              <option value="Oran">Oran (31)</option>
+              <option value="El Bayadh">El Bayadh (32)</option>
+              <option value="Illizi">Illizi (33)</option>
+              <option value="Bordj Bou Arreridj">
+                Bordj Bou Arreridj (34)
+              </option>
+              <option value="Boumerdes">Boumerdes (35)</option>
+              <option value="El Tarf">El Tarf (36)</option>
+              <option value="Tindouf">Tindouf (37)</option>
+              <option value="Tissemsilt">Tissemsilt (38)</option>
+              <option value="El Oued">El Oued (39)</option>
+              <option value="Khenchela">Khenchela (40)</option>
+              <option value="Souk Ahras">Souk Ahras (41)</option>
+              <option value="Tipaza">Tipaza (42)</option>
+              <option value="Mila">Mila (43)</option>
+              <option value="Ain Defla">Ain Defla (44)</option>
+              <option value="Naama">Naama (45)</option>
+              <option value="Ain Temouchent">Ain Temouchent (46)</option>
+              <option value="Ghardaia">Ghardaia (47)</option>
+              <option value="Relizane">Relizane (48)</option>
+              <option value="Timimoun">Timimoun (49)</option>
+              <option value="Bordj Badji Mokhtar">
+                Bordj Badji Mokhtar (50)
+              </option>
+              <option value="Ouled Djellal">Ouled Djellal (51)</option>
+              <option value="Beni Abbes">Beni Abbes (52)</option>
+              <option value="Ain Salah">Ain Salah (53)</option>
+              <option value="Ain Guezzam">Ain Guezzam (54)</option>
+              <option value="Touggourt">Touggourt (55)</option>
+              <option value="Djanet">Djanet (56)</option>
+              <option value="El M'Ghair">El M'Ghair (57)</option>
+              <option value="El Menia">El Menia (58)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Phone Number</b></td>
+          <td>
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              id="phone"
+              name="phone"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Mail Address</b></td>
+          <td>
+            <input
+              type="email"
+              placeholder="Mail Address"
+              id="email"
+              name="email"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Address</b></td>
+          <td>
+            <textarea
+              id="address"
+              placeholder="Address"
+              name="address"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Password</b></td>
+          <td>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Rewrite Password</b></td>
+          <td>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password2"
+              name="password2"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Gender</b></td>
+          <td>
+            Male
+            <input type="radio" id="male" name="gender" value="Male" /> Female
+            <input type="radio" id="female" name="gender" value="Female" />
+          </td>
+        </tr>
+        <tr>
+          <td><button type="submit">Sign Up</button></td>
+          <td><button type="reset">Clear</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

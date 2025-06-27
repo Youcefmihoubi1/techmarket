@@ -1,0 +1,246 @@
+function check_login(event) {
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let msg = document.getElementById("msg");
+    let img = document.getElementById("login_img");
+
+    if (!email && !password) {
+        img.src = "/daw/images/icons/angry.png";
+        msg.innerText = "Email and Password are required";
+        msg.style.color = "red";
+    } else if (!email) {
+        img.src = "/daw/images/icons/angry.png";
+        msg.innerText = "Email is required";
+        msg.style.color = "red";
+    } else if (!password) {
+        img.src = "/daw/images/icons/angry.png";
+        msg.innerText = "Password is required";
+        msg.style.color = "red";
+    } else if (!email.includes("@") || !email.includes(".")) {
+        img.src = "/daw/images/icons/angry.png";
+        msg.innerText = "Please enter a valid email address";
+        msg.style.color = "red";
+    } else {
+        img.src = "/daw/images/icons/smile.png";
+        document.forms[0].submit();
+    }
+}
+function typing_email() {
+    let img = document.getElementById('login_img');
+    img.src = "/daw/images/icons/looking.png";
+}
+
+function typing() {
+    let img = document.getElementById('login_img');
+    img.src = "/daw/images/icons/close.png";
+}
+function unlogin(){
+    let img = document.getElementById("login_img");
+    img.src = "/daw/images/icons/think.png";
+    document.getElementById("msg").innerText="";
+}
+function check_signup(event){
+    let fname = document.getElementById("fname").value.trim();
+    let lname = document.getElementById("lname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let age = document.getElementById("age").value;
+    let wilaya = document.getElementById("wilaya").value;
+    let password = document.getElementById("password").value;
+    let password2 = document.getElementById("password2").value;
+    
+    let msg="";
+
+    if(!fname){
+        msg+="First Name is required\n";
+    }
+    if(!lname){
+        msg+="last Name is required\n";
+    }
+    if(!email){
+        msg+="Email is required\n";
+    }
+    else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        msg += "Email Address is not valid\n";
+    }
+    
+    if(!phone){
+        msg+="phone is required\n";
+    }
+    else if(!/^\d{10}$/.test(phone)){
+        msg += "Phone number must be exactly 10 digits\n";
+    }
+    
+    if(!address){
+        msg+="address is required\n";
+    }
+    if(!gender){
+        msg+="gender is required\n";
+    }
+    if(!age){
+        msg+="age is required\n";
+    }
+    else if(age<17 || age >100){
+        msg+="Age is not accepted\n"
+    }
+    if(!wilaya){
+        msg+="wilaya is required\n";
+    }
+    if(!password){
+        msg+="Password is required\n";
+    }
+    else if(password.length <8){
+        msg+="Password is less than 8 char\n";
+    }
+    if(!password2){
+        msg+="Password Confirmation is required\n";
+    }
+    if(password != password2){
+        msg+="Password is not correct\n";
+    }
+    if(msg){
+    alert("❌\n"+msg);
+    return false;
+    
+}
+return true;
+}function check_quantity() {
+    let quantity = parseInt(document.getElementById("quantity").value) || 1;
+    let colorRow = document.getElementById("colors");
+    let colorQuantitiesRow = document.getElementById("color-quantities");
+    let colorSelection = document.getElementById("color-selection");
+
+    if (quantity >= 1) {
+        colorRow.style.display = "table-row";
+
+        if (quantity === 1) {
+            colorSelection.innerHTML = `
+                <label>Black</label>
+                <input type="radio" name="color" value="black" class="color" required />
+                <label>White</label>
+                <input type="radio" name="color" value="white" class="color" />
+            `;
+            colorQuantitiesRow.style.display = "none";
+        } else if (quantity === 2) {
+            colorSelection.innerHTML = `
+                <label>Black</label>
+                <input type="checkbox" name="color[]" value="black" class="color" />
+                <label>White</label>
+                <input type="checkbox" name="color[]" value="white" class="color" />
+            `;
+            colorQuantitiesRow.style.display = "none";
+        } else {
+            colorSelection.innerHTML = `
+                <label>Black</label>
+                <input type="checkbox" name="color[]" value="black" class="color" />
+                <label>White</label>
+                <input type="checkbox" name="color[]" value="white" class="color" />
+            `;
+            colorQuantitiesRow.style.display = "table-row";
+            document.getElementById("black-quantity").value = 0;
+            document.getElementById("white-quantity").value = 0;
+        }
+    } else {
+        colorRow.style.display = "none";
+        colorQuantitiesRow.style.display = "none";
+        colorSelection.innerHTML = `
+            <label>Black</label>
+            <input type="radio" name="color" value="black" class="color" disabled />
+            <label>White</label>
+            <input type="radio" name="color" value="white" class="color" disabled />
+        `;
+        document.getElementById("quantity").value = 1; // ضمان أن الكمية لا تقل عن 1
+    }
+}
+
+function validate_color_quantities() {
+    let quantity = parseInt(document.getElementById("quantity").value) || 0;
+    let blackQuantity = parseInt(document.getElementById("black-quantity").value) || 0;
+    let whiteQuantity = parseInt(document.getElementById("white-quantity").value) || 0;
+    let sum = blackQuantity + whiteQuantity;
+
+    if (quantity > 2 && sum > quantity) {
+        alert("❌ Sum of color quantities cannot exceed total quantity!");
+        document.getElementById("black-quantity").value = 0;
+        document.getElementById("white-quantity").value = 0;
+        return false;
+    }
+    if (quantity > 2 && sum < quantity) {
+        alert(`❌ Sum of color quantities (${sum}) must equal total quantity (${quantity})`);
+        return false;
+    }
+    return true;
+}
+
+function validation_order() {
+    try {
+        let quantity = parseInt(document.getElementById("quantity").value) || 0;
+        let colors = document.querySelectorAll('.color');
+        let blackQuantity = parseInt(document.getElementById("black-quantity").value) || 0;
+        let whiteQuantity = parseInt(document.getElementById("white-quantity").value) || 0;
+        let colorChecked = false;
+
+        colors.forEach(input => {
+            if (input.checked) colorChecked = true;
+        });
+
+        console.log("Quantity:", quantity, "ColorChecked:", colorChecked, "BlackQty:", blackQuantity, "WhiteQty:", whiteQuantity);
+
+        if (!quantity || quantity <= 0) {
+            alert("❌ Quantity is required");
+            return;
+        } else if (quantity === 1 && !colorChecked) {
+            alert("❌ Color is required");
+            return;
+        } else if (quantity === 2 && !colorChecked) {
+            alert("❌ At least one color must be selected");
+            return;
+        } else if (quantity > 2) {
+            let sum = blackQuantity + whiteQuantity;
+            if (sum !== quantity) {
+                alert(`❌ Sum of color quantities (${sum}) must equal total quantity (${quantity})`);
+                return;
+            } else if (blackQuantity < 0 || whiteQuantity < 0) {
+                alert("❌ Color quantities cannot be negative");
+                return;
+            } else if (blackQuantity === 0 && whiteQuantity === 0) {
+                alert("❌ At least one color quantity must be specified");
+                return;
+            } else if (!colorChecked) {
+                alert("❌ At least one color must be selected");
+                return;
+            }
+        }
+
+        // إرسال النموذج
+        document.getElementById("order").submit();
+    } catch (error) {
+        console.error("Error in validation_order:", error);
+        alert("❌ An error occurred while submitting the order. Please check the console for details.");
+    }
+}
+
+// ضمان تحديث الحقول عند تحميل الصفحة
+window.onload = function() {
+    try {
+        check_quantity();
+    } catch (error) {
+        console.error("Error in window.onload:", error);
+    }
+};
+function toggleTheme() {
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+}
+window.onload = function() {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-theme");
+    }
+}
